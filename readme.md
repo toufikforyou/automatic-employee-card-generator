@@ -29,29 +29,52 @@ The **Automatic Identity Card Generator** is a web application built using **Exp
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/automatic-employee-card-generate.git
-cd automatic-employee-card-generate
+git clone https://github.com/your-username/AutomaticEmployeeCardGenerator.git
+cd AutomaticEmployeeCardGenerator
 ```
 
-### 2. Install the necessary dependencies:
+### 2. Setup Requirements:
+
+Ensure you have the following installed:
+
+- PHP 7.4 or higher
+- MySQL 5.7 or higher
+- Apache/Nginx web server
+- Web browser with JavaScript enabled
+
+### 3. Database Setup:
+
+1. Create a new MySQL database:
+
+```sql
+CREATE DATABASE toufikhasan_madrasha;
+```
+
+2. Import the database structure:
 
 ```bash
-npm install
+mysql -u username -p toufikhasan_madrasha < database/schema.sql
 ```
 
-Ensure you have **Node.js** installed on your machine. You can check if Node.js is installed by running:
+### 4. Configuration:
 
-```bash
-node -v
+1. Update database connection settings in `src/database/config.php`:
+
+```php
+$host = 'localhost';
+$dbname = 'toufikhasan_madrasha';
+$username = 'your_username';
+$password = 'your_password';
 ```
 
-### 3. Run the server:
+### 5. Run the Application:
 
-```bash
-npm start
+1. Place the project files in your web server's document root
+2. Access the application through your web browser:
+
 ```
-
-The application will start running on **http://localhost:3000**.
+http://localhost/AutomaticEmployeeCardGenerator
+```
 
 ## **Usage**
 
